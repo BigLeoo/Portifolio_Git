@@ -9,6 +9,8 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* ---------Body------------------- */
+
 body{
     overflow: hidden;
 }
@@ -23,6 +25,8 @@ body{
     position: relative;
     padding-bottom: 100px; /* altura do footer */
 }
+
+/* ---------------- header ----------------- */
 
 header{
     display: flex;
@@ -82,6 +86,8 @@ button:hover{
     cursor: pointer;
 }
 
+/* ------------------- conteudo ------------------------- */
+
 .container-text{
     /* background-color: white; */
     padding: 150px 0 0 130px; /*top right above left*/
@@ -124,22 +130,36 @@ button:hover{
     margin-top: 10px;
 }
 
-.calculator{
+/* ------------------------ Portifolio ---------------------------------- */
+
+.portifolio{
     text-align: right;
     margin-left: auto;
     margin-right: 250px;
+    position: relative;
+    /* background-color: blue; */
+    padding: 50px 50px 200px 50px;
 }
 
-.calculator h1{
+#top-line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #2ecc71);
+}
+
+.portifolio h1{
     color: white;
     margin-right: 10px;
 }
 
-.calculator span{
+.portifolio span{
     color: #2ecc71;
 }
 
-.btn-calculator{
+.btn-portifolio{
     font-size: 20px;
     width: 250px;
     margin-top: 10px;

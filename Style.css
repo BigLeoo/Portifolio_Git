@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=The+Nautigal&display=swap');
+
+*{ /*config geral*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none; /*Tira o Estlo das lista*/
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+.backgorund{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-image: url(DEV-CODE-4K.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-bottom: 100px; /* altura do footer */
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.cabeçalho-link{
+    display: flex;
+    gap: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.cabeçalho-link a{  /*Costumização dos links dentro da classe cabeçalho*/
+    color: white;
+    font-size: 15px;
+}
+
+.cabeçalho-link a:hover{ /*Costumização dos links, quando passa o mouse por cima, dentro da classe cabeçalho*/
+    color: #2ecc71;
+    transition: 0.3s all;
+}
+
+.logo{
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer; /*sai do ponteiro para mao*/
+}
+
+button{
+    color: #2ecc71;
+    background: transparent;
+    border: solid 1px #2ecc71;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 13px;
+    width: 150px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #2ecc71;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.container-text{
+    /* background-color: white; */
+    padding: 150px 0 0 130px; /*top right above left*/
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+.text h3{
+    color: white;
+    font-size: 50px;
+}
+
+.text h1{
+    color: white;
+    margin-top: 5px;
+}
+
+.text span{
+    color: #2ecc71;
+}
+
+.text p{
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.redes-sociais a{
+    /* background-color: blue; */
+    color: #2ecc71;
+    padding: 10px;
+    /* margin-top: 5px; */
+}
+
+.btn{
+    margin-top: 10px;
+}
+
+.calculator{
+    text-align: right;
+    margin-left: auto;
+    margin-right: 250px;
+}
+
+.calculator h1{
+    color: white;
+    margin-right: 10px;
+}
+
+.calculator span{
+    color: #2ecc71;
+}
+
+.btn-calculator{
+    font-size: 20px;
+    width: 250px;
+    margin-top: 10px;
+}
+
+footer{
+    /* background-color: blue; */
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    /* height: 100px; */
+}

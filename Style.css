@@ -112,18 +112,23 @@ button:hover{
 
 .text span{
     color: #2ecc71;
+    border-right: 3px solid white;
+    /* margin: 0 10px; */
+    animation: typing 2s steps(13), cursor 500ms infinite step-end alternate;
 }
 
-#typing-line{
-    /* display: inline-block; */
-    border-right: 3px solid white;
-    margin: 0 10px;
-    animation: typing 1s steps(40) infinite;
-}
+
 
 @keyframes typing {
-    from {width: 0;}
-    to {width: 100%;}
+    from {
+        width: 0;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .text p{

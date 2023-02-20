@@ -139,6 +139,7 @@ button:hover{
     position: relative;
     /* background-color: blue; */
     padding: 50px 50px 200px 50px;
+    overflow: hidden;
 }
 
 #top-line{
@@ -148,15 +149,36 @@ button:hover{
     width: 100%;
     height: 3px;
     background: linear-gradient(to right, transparent, #2ecc71);
+    animation: topline 2s linear infinite;
+}
+
+@keyframes topline{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
 }
 
 #right-line{
     position: absolute;
     top: 0;
     left: 100%;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, transparent, #2ecc71);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #2ecc71);
+    animation: rightline 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes rightline{
+    0%{
+        transform: translatey(-100%);
+    }
+    100%{
+        transform: translatey(100%);
+    }
 }
 
 #bottom-line{
@@ -165,16 +187,37 @@ button:hover{
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, transparent, #2ecc71);
+    background: linear-gradient(to left, transparent, #2ecc71);
+    animation: bottomline 2s linear infinite;
+}
+
+@keyframes bottomline{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
 }
 
 #left-line{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, transparent, #2ecc71);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #2ecc71);
+    animation: leftline 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes leftline{
+    0%{
+        transform: translatey(100%);
+    }
+    100%{
+        transform: translatey(-100%);
+    }
 }
 
 .portifolio h1{

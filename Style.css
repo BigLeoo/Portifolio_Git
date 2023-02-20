@@ -11,9 +11,6 @@
 
 /* ---------Body------------------- */
 
-body{
-    overflow: hidden;
-}
 
 .backgorund{
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
@@ -68,6 +65,12 @@ header{
     cursor: pointer; /*sai do ponteiro para mao*/
 }
 
+.logo:hover{
+    background-color: #2ecc71;
+    color: white;
+    transition: 0.3s all;
+}
+
 button{
     color: #2ecc71;
     background: transparent;
@@ -99,7 +102,7 @@ button:hover{
 
 .text h3{
     color: white;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .text h1{
@@ -111,9 +114,21 @@ button:hover{
     color: #2ecc71;
 }
 
+#typing-line{
+    /* display: inline-block; */
+    border-right: 3px solid white;
+    margin: 0 10px;
+    animation: typing 1s steps(40) infinite;
+}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
 .text p{
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 300;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -123,11 +138,15 @@ button:hover{
     /* background-color: blue; */
     color: #2ecc71;
     padding: 10px;
+    font-size: 20px;
     /* margin-top: 5px; */
 }
 
 .btn{
     margin-top: 10px;
+    font-size: 22px;
+    height: 70px;
+    width: 210px;
 }
 
 /* ------------------------ Portifolio ---------------------------------- */
@@ -244,6 +263,16 @@ button:hover{
     margin-top: 20px;
     display: block;
 }
+
+/*----------------- Container sobre mim---------------------- */
+#container-sobre{
+    background-color: gray;
+    color: white;
+    margin-top: 50px;
+    width: 1000px;
+
+}
+
 
 footer{
     /* background-color: blue; */

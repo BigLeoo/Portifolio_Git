@@ -278,6 +278,36 @@ button:hover{
 
 }
 
+/* ----------------------- divisoria de pagina ---------------- */
+
+#circle-container{
+    display: block;
+	position: relative;
+    margin: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#semi-circle{
+	background-color: #fff;
+	width: 220px;
+	height: 110px;
+	border-radius: 120px 120px 0 0;
+    margin: auto;
+}
+
+/* ------------------------- about me ------------------- */
+
+#about-container{
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    border-radius: 0.5rem;
+    background-color: blue;
+}
+
+/* ------------------- Footer ----------------------*/
 
 footer{
     /* background-color: blue; */

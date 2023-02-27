@@ -48,6 +48,7 @@ header{
 .cabeçalho-link a{  /*Costumização dos links dentro da classe cabeçalho*/
     color: white;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .cabeçalho-link a:hover{ /*Costumização dos links, quando passa o mouse por cima, dentro da classe cabeçalho*/
@@ -76,6 +77,7 @@ header{
 }
 
 button{
+    font-weight: bold;
     color: #2ecc71;
     background: transparent;
     border: solid 1px #2ecc71;

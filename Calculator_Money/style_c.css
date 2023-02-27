@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=The+Nautigal&display=swap');
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css'); */
+
+*{ /*config geral*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none; /*Tira o Estlo das lista*/
+    font-family: "Poppins", sans-serif;
+}
+
+/* ---------Body------------------- */
+
+body{
+    background-color: #fff5d7;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative;
+    /* padding-bottom: 100px; altura do footer */
+    /* overflow: hidden; */
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    border-bottom: 0.001rem solid rgba(128, 128, 128, 0.363);
+}
+
+.cabeçalho-link{
+    display: flex;
+    gap: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.cabeçalho-link a{  /*Costumização dos links dentro da classe cabeçalho*/
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cabeçalho-link a:hover{ /*Costumização dos links, quando passa o mouse por cima, dentro da classe cabeçalho*/
+    color: #ff5e6c;
+    transition: 0.3s all;
+}
+
+.logo{
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: 1px solid #ff5e6c;
+    color: #ff5e6c;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer; /*sai do ponteiro para mao*/
+}
+
+.logo:hover{
+    background-color: #ff5e6c;
+    color: white;
+    transition: 0.3s all;
+}
+
+button{
+    font-weight: bold;
+    color: #ff5e6c;
+    background: transparent;
+    border: solid 1px #ff5e6c;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 13px;
+    width: 150px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ff5e6c;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* ---------------- Navegation ------------------------ */
+#navegation{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#container_dados{
+    display: grid;
+    box-shadow: 0 0 13px #feb300;
+    border-radius: 20px;
+    width: 340px;
+    height: 320px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 5px 0;
+}
+
+#container_dados input{
+    width: 100%;
+}
+
+#container_resultados{
+    display: grid;
+    box-shadow: 0 0 13px #feb300;
+    border-radius: 20px;
+    width: 340px;
+    height: 320px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 20px 0;
+}
+
+#container_resultados input{
+    width: 300px;
+}
+
+#nav_buttom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 0;
+}
+
+#nav_buttom button{
+    font-size: 20px;
+    box-shadow: 0 0 13px #ff5e6c;
+}

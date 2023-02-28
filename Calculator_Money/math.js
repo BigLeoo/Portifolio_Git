@@ -9,16 +9,30 @@ function selecionarBotao(buttom){
 }
 
 function taxaEquivalente(taxaSelic, taxaDi){
-    var cdi = taxaSelic - 0.1;
-    var taxaAno = (cdi/100)*(taxaDi/100);
-    var taxaDiaria = (1+taxaAno)**(1/360)-1;
+    let cdi = taxaSelic - 0.1;
+    let taxaAno = (cdi/100)*(taxaDi/100);
+    let taxaDiaria = (1+taxaAno)**(1/360)-1;
     return taxaDiaria
 }
 
 function calculoIr(dataCompra, dataFinal){
-    var diasData = dataFinal - dataCompra;
-    return diasData
+    let data1 = new Date(dataCompra);
+    let data2 = new Date(dataFinal);
+    let diferencaData = (data1 - data2)/86400000;
+
+    if(diferencaData <= 180){
+        var ir = 22.5;
+    }
+
+    if(diferencaData > 180 &)
+    console.log('dias de diferença: ',diferencaData);
+    console.log('IR: ', ir)
+    return diferencaData
 }
+
+let data = new Date();
+console.log(data.getDate());
+
 
 // const btn = document.getElementById("#btn_calcular")
 

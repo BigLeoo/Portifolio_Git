@@ -81,7 +81,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+header button:hover, #nav_button button:hover{
     background-color: #ff5e6c;
     color: white;
     transition: 0.5s;
@@ -95,6 +95,8 @@ button:hover{
     gap: 20px;
     justify-content: center;
     margin-top: 50px;
+    font-weight: 600;
+    color: #ff5e6c;
 }
 
 #container_dados{
@@ -102,7 +104,7 @@ button:hover{
     box-shadow: 0 0 13px #feb300;
     border-radius: 20px;
     width: 340px;
-    height: 320px;
+    height: 370px;
     justify-content: center;
     align-items: center;
     padding: 10px 0 5px 0;
@@ -110,6 +112,7 @@ button:hover{
 
 #container_dados input{
     width: 100%;
+    
 }
 
 #container_resultados{
@@ -117,7 +120,7 @@ button:hover{
     box-shadow: 0 0 13px #feb300;
     border-radius: 20px;
     width: 340px;
-    height: 320px;
+    height: 370px;
     justify-content: center;
     align-items: center;
     padding: 10px 0 20px 0;
@@ -127,14 +130,27 @@ button:hover{
     width: 300px;
 }
 
-#nav_buttom{
+.selectButtoms{
+    box-shadow: 0 0 7px #ff5e6c;
+}
+
+.selectButtoms.selecionado{
+    background-color: #ff5e6c;
+    color: white;
+}
+
+#lca{
+    box-shadow: 0 0 7px #ff5e6c;
+}
+
+#nav_button{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 50px 0 0 0;
 }
 
-#nav_buttom button{
+#nav_button button{
     font-size: 20px;
     box-shadow: 0 0 13px #ff5e6c;
 }

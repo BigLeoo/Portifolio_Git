@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <script src="math.js"></script>
     <header>
         <div class="logo">
             <i class="fa-solid fa-l"></i>
@@ -27,32 +28,36 @@
     <nav>
         <div id="navegation">
             <div id="container_dados">
-                <h1>Dados para Cálculo</h1>
+                <h1 style="color: black;">Dados para Cálculo</h1>
                 <div>
                     <p>Investimento</p>
-                    <input type="text">
+                    <input type="number" id="investimento">
                 </div>
                 <div>
                     <p>Taxa Selic</p>
-                    <input type="text">
+                    <input type="number" id="taxaSelic">
+                </div>
+                <div>
+                    <p>Taxa DI</p>
+                    <input type="number" id="taxaDi">
                 </div>
 
                 <div>
                     <p>Data de Compra</p>
-                    <input type="text">
+                    <input type="date" id="dataCompra">
                 </div>
                 <div>
                     <p>Data de venda</p>
-                    <input type="text">
+                    <input type="date" id="dataVenda">
                 </div>
-                <div>
-                    <button>CDB</button>
-                    <button>LCA/LCI</button>
+                <div id="buttons">
+                    <button  class="selectButtoms" onclick="selecionarBotao(this)">CDB</button>
+                    <button  class="selectButtoms" onclick="selecionarBotao(this)">LCA/LCI</button>
                 </div>
             </div>
 
             <div id="container_resultados">
-                <h1>Resultados</h1>
+                <h1 style="color: black;">Resultados</h1>
                 <div>
                     <p>Lucro Bruto</p>
                     <input type="text">
@@ -73,7 +78,7 @@
             </div>
         </div>
 
-        <div id="nav_buttom">
+        <div id="nav_button">
             <button>Calcular</button>
         </div>    
     </nav>

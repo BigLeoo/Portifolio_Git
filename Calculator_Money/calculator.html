@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <script src="math.js"></script>
+    <script src="math.js" defer></script>
     <header>
         <div class="logo">
             <i class="fa-solid fa-l"></i>
@@ -60,26 +60,30 @@
                 <h1 style="color: black;">Resultados</h1>
                 <div>
                     <p>Lucro Bruto</p>
-                    <input type="text">
+                    <input type="text" id="lucroBruto">
                 </div>
                 <div>
                     <p>% Imposto de Renda</p>
-                    <input type="text">
+                    <input type="text" id="percentualIr">
                 </div>
 
                 <div>
                     <p>Imposto de Renda</p>
-                    <input type="text">
+                    <input type="text" id="impostoRenda">
                 </div>
                 <div>
                     <p>Lucro Liquido</p>
-                    <input type="text">
+                    <input type="text" id="lucroLiquido">
+                </div>
+                <div>
+                    <p>Valor Liquido</p>
+                    <input type="text" id="valorLiquido">
                 </div>
             </div>
         </div>
 
         <div id="nav_button">
-            <button id="btn_calcular">Calcular</button>
+            <button id="btn_calcular" onclick="calculoLucro()">Calcular</button>
         </div>    
     </nav>
     

@@ -31,15 +31,15 @@
                 <h1 style="color: black;">Dados para Cálculo</h1>
                 <div>
                     <p>Investimento</p>
-                    <input type="number" name="investimento" placeholder="R$" value="" id="investimento">
+                    <input type="number" name="investimento" min="0" step="0.01" oninput="validity.valid||(value='');" placeholder="R$" value="" id="investimento">
                 </div>
                 <div>
                     <p>Taxa Selic</p>
-                    <input type="number" placeholder="%" value="13.75" id="taxaSelic">
+                    <input type="number" placeholder="%" min="0" oninput="validity.valid||(value='');" value="13.75" id="taxaSelic">
                 </div>
                 <div>
                     <p>Taxa DI</p>
-                    <input type="number" placeholder="%" id="taxaDi">
+                    <input type="number" placeholder="%" min="0" oninput="validity.valid||(value='');" id="taxaDi">
                 </div>
 
                 <div>

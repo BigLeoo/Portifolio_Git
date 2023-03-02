@@ -8,11 +8,26 @@ function selecionarBotao(buttom){
     buttom.classList.add("selecionado");
 }
 
+// -------------------------- Verificação clique cdb ou LCA ---------------------------------
+
+cdb_on = 0;
+lca_on = 0;
+
+function click_cdb(){
+    cdb_on = 1;
+    lca_on = 0;
+}
+
+function click_lca(){
+    cdb_on = 0;
+    lca_on = 1; 
+}
+
 //------------------------ Calculo do Resultado -----------------------------------------------
 
 function taxaEquivalente(){
-    let taxaSelic = document.querySelector('#taxaSelic').value;
-    let taxaDi = document.querySelector('#taxaDi').value;
+    let taxaSelic = parseFloat(document.querySelector('#taxaSelic').value);
+    let taxaDi = parseFloat(document.querySelector('#taxaDi').value);
     
     let cdi = taxaSelic - 0.1;
     let taxaAno = (cdi/100)*(taxaDi/100);
@@ -24,8 +39,6 @@ function taxaEquivalente(){
 function defIr(){
     let dataCompra = document.querySelector('#dataCompra').value;
     let dataFinal = document.querySelector('#dataFinal').value;
-
-    // console.log('Data compra: ',dataCompra);
 
     let data1 = new Date(dataCompra);
     let data2 = new Date(dataFinal);
@@ -53,23 +66,40 @@ function defIr(){
 }
 
 function calculoLucro(){
-    let dias_corridos = defIr()[0];
-    let ir = defIr()[1];
-    let taxa_diaria = taxaEquivalente();
-    let investimento = document.querySelector('#investimento').value;
 
-    let valorBruto = investimento*((1+taxa_diaria)**dias_corridos);
-    let lucroBruto = valorBruto - investimento;
-    let imposto = lucroBruto * (ir/100);
-    let lucroLiquido = lucroBruto - imposto;
-    let valorLiquido = lucroLiquido + investimento;
+    if(cdb_on == 0 && lca_on == 0){
+        alert("Clique em CDB ou LCA/LCI");
+    }
+
+    if(cdb_on == 1){
+        var dias_corridos = defIr()[0];
+        var ir = defIr()[1];
+        var taxa_diaria = taxaEquivalente();
+        var investimento = parseFloat(document.querySelector('#investimento').value);
+
+        var valorBruto = investimento*((1+taxa_diaria)**dias_corridos);
+        var lucroBruto = valorBruto - investimento;
+        var imposto = lucroBruto * (ir/100);
+        var lucroLiquido = lucroBruto - imposto;
+        var valorLiquido = lucroLiquido + investimento;
+    }
+
+    if(lca_on == 1){
+        var dias_corridos = defIr()[0];
+        var ir = 0;
+        var taxa_diaria = taxaEquivalente();
+        var investimento = parseFloat(document.querySelector('#investimento').value);
     
-    console.log(valorLiquido)
+        var valorBruto = investimento*((1+taxa_diaria)**dias_corridos);
+        var lucroBruto = valorBruto - investimento;
+        var imposto = lucroBruto * (ir);
+        var lucroLiquido = lucroBruto - imposto;
+        var valorLiquido = lucroLiquido + investimento;
+    }
 
     document.getElementById("lucroBruto").value = lucroBruto.toFixed(2);
     document.getElementById("percentualIr").value = ir;
     document.getElementById("impostoRenda").value = imposto.toFixed(2);
     document.getElementById("lucroLiquido").value = lucroLiquido.toFixed(2);
-    document.getElementById("valorLiquido").value = parseFloat(valorLiquido).toFixed(2);
-
+    document.getElementById("valorLiquido").value = valorLiquido.toFixed(2);
 }

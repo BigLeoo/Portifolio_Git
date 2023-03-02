@@ -14,7 +14,7 @@
 
 .backgorund{
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    background-image: url(DEV-CODE-4K.png);
+    background-image: url(/Home/img/DEV-CODE-4K.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

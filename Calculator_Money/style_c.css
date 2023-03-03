@@ -99,6 +99,8 @@ header button:hover, #nav_button button:hover{
     color: #ff5e6c;
 }
 
+/* ------------------- Container Dados --------------------------- */
+
 #container_dados{
     display: grid;
     box-shadow: 0 0 13px #feb300;
@@ -112,8 +114,22 @@ header button:hover, #nav_button button:hover{
 
 #container_dados input{
     width: 100%;
-    
+    text-align: right;
 }
+
+.container-input{
+    display: flex;
+}
+
+.container-input div{
+    border-top: 1px solid black;
+    border-right: 0px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    color: black;
+}
+
+/* -------------- Container Resultados ---------------------------- */
 
 #container_resultados{
     display: grid;
@@ -128,6 +144,7 @@ header button:hover, #nav_button button:hover{
 
 #container_resultados input{
     width: 300px;
+    text-align: center;
 }
 
 .selectButtoms{
@@ -154,3 +171,4 @@ header button:hover, #nav_button button:hover{
     font-size: 20px;
     box-shadow: 0 0 13px #ff5e6c;
 }
+

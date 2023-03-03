@@ -31,15 +31,24 @@
                 <h1 style="color: black;">Dados para Cálculo</h1>
                 <div>
                     <p>Investimento</p>
-                    <input type="number" name="investimento" min="0" step="0.01" oninput="validity.valid||(value='');" placeholder="R$" value="" id="investimento">
-                </div>
+                    <div class="container-input">
+                        <div>R$</div>
+                        <input type="number" name="investimento" min="0" step="0.01" required="required" pattern="[0-9.]+$" value="" id="investimento">
+                    </div>
+                    </div>
                 <div>
                     <p>Taxa Selic</p>
-                    <input type="number" placeholder="%" min="0" oninput="validity.valid||(value='');" value="13.75" id="taxaSelic">
+                    <div class="container-input">
+                        <div>%</div>
+                        <input type="number" min="0" oninput="validity.valid||(value='');" value="13.75" id="taxaSelic">
+                    </div>
                 </div>
                 <div>
                     <p>Taxa DI</p>
-                    <input type="number" placeholder="%" min="0" oninput="validity.valid||(value='');" id="taxaDi">
+                    <div class="container-input">
+                        <div>%</div>
+                        <input type="number" placeholder="%" min="0" oninput="validity.valid||(value='');" id="taxaDi">
+                    </div>
                 </div>
 
                 <div>
@@ -60,24 +69,39 @@
                 <h1 style="color: black;">Resultados</h1>
                 <div>
                     <p>Lucro Bruto</p>
-                    <input type="text" id="lucroBruto">
+                    <div class="container-input">
+                        <div>R$</div>
+                        <input type="text" id="lucroBruto">
+                    </div>
                 </div>
                 <div>
                     <p>% Imposto de Renda</p>
-                    <input type="text" id="percentualIr">
+                    <div class="container-input">
+                        <div>%</div>
+                        <input type="text" id="percentualIr">
+                    </div>
                 </div>
 
                 <div>
                     <p>Imposto de Renda</p>
-                    <input type="text" id="impostoRenda">
+                    <div class="container-input">
+                        <div>R$</div>
+                        <input type="text" id="impostoRenda">
+                    </div>
                 </div>
                 <div>
                     <p>Lucro Liquido</p>
-                    <input type="text" id="lucroLiquido">
+                    <div class="container-input">
+                        <div>R$</div>
+                        <input type="text" id="lucroLiquido">
+                    </div>
                 </div>
                 <div>
                     <p>Valor Liquido</p>
-                    <input type="text" id="valorLiquido">
+                    <div class="container-input">
+                        <div>R$</div>
+                        <input type="text" id="valorLiquido">
+                    </div>
                 </div>
             </div>
         </div>

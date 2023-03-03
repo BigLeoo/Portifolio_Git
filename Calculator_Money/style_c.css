@@ -115,6 +115,7 @@ header button:hover, #nav_button button:hover{
 #container_dados input{
     width: 100%;
     text-align: right;
+    border-left: 0;
 }
 
 .container-input{
@@ -123,7 +124,7 @@ header button:hover, #nav_button button:hover{
 
 .container-input div{
     border-top: 1px solid black;
-    border-right: 0px solid black;
+    border-right: 0px;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     color: black;
@@ -145,6 +146,15 @@ header button:hover, #nav_button button:hover{
 #container_resultados input{
     width: 300px;
     text-align: center;
+}
+
+#container_resultados output{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+    border-left: 0;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .selectButtoms{

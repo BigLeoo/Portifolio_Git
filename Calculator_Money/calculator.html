@@ -33,31 +33,31 @@
                     <p>Investimento</p>
                     <div class="container-input">
                         <div>R$</div>
-                        <input type="number" name="investimento" min="0" step="0.01" pattern="[0-9.]+$" value="" id="investimento">
+                        <input type="number" name="investimento" min="0" step="0.01" value="" id="investimento">
                     </div>
                     </div>
                 <div>
                     <p>Taxa Selic</p>
                     <div class="container-input">
                         <div>%</div>
-                        <input type="number" min="0" pattern="[0-9.]" value="13.75" id="taxaSelic">
+                        <input type="number" min="0" step="0.01" value="13.75" id="taxaSelic">
                     </div>
                 </div>
                 <div>
                     <p>Taxa DI</p>
                     <div class="container-input">
                         <div>%</div>
-                        <input type="number" min="0" pattern="[0-9.]+$" id="taxaDi">
+                        <input type="number" min="0"  value="" id="taxaDi">
                     </div>
                 </div>
 
                 <div>
                     <p>Data de Compra</p>
-                    <input type="date" id="dataCompra">
+                    <input type="date" id="dataCompra" value="">
                 </div>
                 <div>
                     <p>Data Final</p>
-                    <input type="date" id="dataFinal">
+                    <input type="date" id="dataFinal" value="">
                 </div>
                 <div id="buttons">
                     <button  class="selectButtoms" onclick="selecionarBotao(this), click_cdb()">CDB</button>

@@ -115,7 +115,9 @@ header button:hover, #nav_button button:hover{
 #container_dados input{
     width: 100%;
     text-align: right;
-    border-left: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    /* border-left: 0; */
 }
 
 .container-input{
@@ -128,6 +130,14 @@ header button:hover, #nav_button button:hover{
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     color: black;
+    background-color: white;
+}
+
+.container-input input{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 0;
 }
 
 /* -------------- Container Resultados ---------------------------- */
@@ -143,18 +153,32 @@ header button:hover, #nav_button button:hover{
     padding: 10px 0 20px 0;
 }
 
-#container_resultados input{
+/* #container_resultados input{
     width: 300px;
     text-align: center;
-}
+} */
 
 #container_resultados output{
-    width: 100%;
+    width: 290px;
     text-align: center;
     border-top: 1px solid black;
     border-left: 0;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
+    background-color: white;
+}
+
+#impostoRenda, #percentualIr{
+    color: #ff5e6c;
+}
+
+#lucroLiquido, #valorLiquido, #lucroBruto{
+    color: green;
+}
+
+.container-input div{
+    text-align: center;
+    width: 30px;
 }
 
 .selectButtoms{

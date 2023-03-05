@@ -24,17 +24,25 @@ function click_lca(){
 }
 
 //------------------------- API Taxa Selic Hoje ------------------------------------------
-const today = new Date()
+let dateToday = new Date();
+let day = dateToday.getDate();
+let month = dateToday.getMonth();
+let year = dateToday.getFullYear();
 
-let url = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.4189/dados?formato=json&dataInicial=01/01/2013&dataFinal=01/03/2023"
+let url = `https://api.bcb.gov.br/dados/serie/bcdata.sgs.4189/dados?formato=json&dataInicial=${day}/${month}/${year}&dataFinal=${day}/${month}/${year}`
 
 fetch(url)
     .then(response => response.json())
-    .then(data => {
-        // console.log(data.length)
-        // for(let i = 0; i <= data.length; i++){
-        //     console.log(data[i].valor);
-        // }
+    .then(data => data.forEach(obj => {
+        taxaSelicHoje = obj.valor;
+        document.getElementById("taxaSelic").value = taxaSelicHoje;
+    }))
+        
+    // .then(data => {
+    //     console.log(data.length)
+    //     for(let i = 0; i <= data.length; i++){
+    //         console.log(data[i].valor);
+    //     }
 
         // data.forEach(obj => console.log(obj.valor));
 
@@ -97,8 +105,8 @@ function calculoLucro(){
     dataCompra = document.querySelector('#dataCompra').value;
     dataFinal = document.querySelector('#dataFinal').value;
 
-    console.log(investimento, taxaSelic, taxaDi, dataCompra, dataFinal)
-    console.log(investimento.lenght)
+    // console.log(investimento, taxaSelic, taxaDi, dataCompra, dataFinal)
+    // console.log(investimento.lenght)
 
     if(investimento  == NaN)
         {

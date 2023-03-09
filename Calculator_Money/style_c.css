@@ -13,7 +13,8 @@
 /* ---------Body------------------- */
 
 body{
-    background-color: #fff5d7;
+    background-color: #e9edef;
+    /* background-color: #e9edef; */
     background-repeat: no-repeat;
     background-size: cover; 
     position: relative;
@@ -29,6 +30,8 @@ header{
     text-align: center;
     padding: 1rem 0 1rem 0;
     border-bottom: 0.001rem solid rgba(128, 128, 128, 0.363);
+    background-color: #0f3256;
+    box-shadow: 0 0 13px ;
 }
 
 .cabeçalho-link{
@@ -39,7 +42,7 @@ header{
 }
 
 .cabeçalho-link a{  /*Costumização dos links dentro da classe cabeçalho*/
-    color: black;
+    color: white;
     font-size: 15px;
     font-weight: bold;
 }
@@ -89,7 +92,7 @@ header button:hover, #nav_button button:hover{
 }
 
 /* ---------------- Navegation ------------------------ */
-#navegation{
+#nav_dados{
     position: relative;
     display: flex;
     gap: 20px;
@@ -99,18 +102,66 @@ header button:hover, #nav_button button:hover{
     color: #ff5e6c;
 }
 
-/* ------------------- Container Dados --------------------------- */
+/* ------------------- Grid Dados --------------------------- */
 
 #container_dados{
     display: grid;
-    box-shadow: 0 0 13px #feb300;
+    grid-template-columns: 40% 40%; /* 2 colunas */
+    grid-template-rows: 20% 20% 20% 20% 20%;  /* 4 linhas */
+    grid-template-areas: "header header"
+                         "investimento data_compra"
+                         "taxa_selic  data_final"
+                         "taxa_cdi botoes" 
+                         "calcular calcular";
+    grid-column-gap: 10px;
+    box-shadow: 0 0 13px gray;
     border-radius: 20px;
-    width: 340px;
+    width: 60%;
     height: 370px;
     justify-content: center;
     align-items: center;
-    padding: 10px 0 5px 0;
+    background-color: #fff;
+    color: #0f3256;
 }
+
+#container_dados h1{
+    grid-area: header;
+    text-align: center;
+}
+
+#container-grid-investimento{
+    grid-area: investimento;
+}
+
+#container-grid-taxaSelic{
+    grid-area: taxa_selic;
+}
+
+#container-grid-taxaCDI{
+    grid-area: taxa_cdi;
+}
+
+#container-grid-dataCompra{
+    grid-area: data_compra;
+}
+
+#container-grid-dataFinal{
+    grid-area: data_final;
+}
+
+#buttons{
+    grid-area: botoes;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+#nav_button{
+    grid-area: calcular;
+}
+
+/* --------------------- Container Dados ------------------------ */
 
 #container_dados input{
     width: 100%;
@@ -140,32 +191,124 @@ header button:hover, #nav_button button:hover{
     border-left: 0;
 }
 
-/* -------------- Container Resultados ---------------------------- */
+/* navegation Resultados */
+
+.nav_resultados{
+    /* background-color: blue; */
+    margin: 60px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------- Container Resultados grid ---------------------------- */
 
 #container_resultados{
     display: grid;
-    box-shadow: 0 0 13px #feb300;
+    grid-template-columns: 40% 40%; /* 3 colunas */
+    grid-template-rows: 20% 20% 20% 20%;  /* 2 linhas */
+    grid-template-areas: "header header"
+                        "investimento Lucro_b"
+                        "Imposto_p Imposto_r"
+                        "lucro_l valor_l";
+    box-shadow: 0 0 13px gray;
+    grid-gap: 20px;
     border-radius: 20px;
-    width: 340px;
-    height: 370px;
+    width: 60%;
+    height: 500px;
     justify-content: center;
     align-items: center;
-    padding: 10px 0 20px 0;
+    background-color: #fff;
+    /* padding: 20px 20px 20px 100px; */
 }
 
-/* #container_resultados input{
-    width: 300px;
+#container_resultados h1{
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    /* grid-column: 1/4; */
+    grid-area: header;
     text-align: center;
-} */
+    /* background-color: yellow; */
+}
 
-#container_resultados output{
-    width: 290px;
+#container-output-investimento{
+    grid-area: investimento;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-output-lucroBruto{
+    grid-area: Lucro_b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}
+
+#container-output-percentualIr{
+    grid-area: Imposto_p;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+#container-output-impostoRenda{
+    grid-area: Imposto_r;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ff5e6c; */
+}
+
+#container-output-lucroLiquido{
+    grid-area: lucro_l;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+#container-output-valorLiquido{
+    grid-area: valor_l;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: azure; */
+}
+
+/*--------------------- Container Resultados Output -------------------------  */
+.container-output{
+    width: 300px;
+    height: 100px;
     text-align: center;
-    border-top: 1px solid black;
-    border-left: 0;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    font-weight: bolder;
+}
+
+
+.container-output output{
     background-color: white;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    border-top: 0px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    font-size: 30px;
+}
+
+.container-output p{
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 0px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 #impostoRenda, #percentualIr{
@@ -194,11 +337,13 @@ header button:hover, #nav_button button:hover{
     box-shadow: 0 0 7px #ff5e6c;
 }
 
+/* ----------- Botao de Calcular ------------- */
+
 #nav_button{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 0 0 0;
+    /* margin: 50px 0 0 0; */
 }
 
 #nav_button button{
@@ -206,3 +351,17 @@ header button:hover, #nav_button button:hover{
     box-shadow: 0 0 13px #ff5e6c;
 }
 
+/* ----------- Exemples -------------------*/
+#container-examples{
+    /* background-color:blue; */
+    margin-top: 100px; 
+}
+
+.container-exemples-img{
+    text-align: center;
+    justify-content: center;
+}
+
+.container-exemples-img img{
+    width: 600px;
+}

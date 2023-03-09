@@ -26,89 +26,137 @@
     </header>
 
     <nav>
-        <div id="navegation">
+
+        <div id="nav_dados">
+
             <div id="container_dados">
+
                 <h1 style="color: black;">Dados para Cálculo</h1>
-                <div>
+
+                <div id="container-grid-investimento">
                     <p>Investimento</p>
                     <div class="container-input">
                         <div>R$</div>
                         <input type="number" name="investimento" min="0" step="0.01" value="" id="investimento">
                     </div>
-                    </div>
-                <div>
+                </div>
+                
+                <div id="container-grid-taxaSelic">
                     <p>Taxa Selic</p>
                     <div class="container-input">
                         <div>%</div>
                         <input type="number" min="0" step="0.01"  id="taxaSelic">
                     </div>
                 </div>
-                <div>
-                    <p>Taxa DI</p>
+
+                <div id="container-grid-taxaCDI">
+                    <p>Taxa CDI</p>
                     <div class="container-input">
                         <div>%</div>
                         <input type="number" min="0"  value="" id="taxaDi">
                     </div>
                 </div>
 
-                <div>
+                <div id="container-grid-dataCompra">
                     <p>Data de Compra</p>
                     <input type="date" id="dataCompra" value="">
                 </div>
-                <div>
+
+                <div id="container-grid-dataFinal">
                     <p>Data Final</p>
                     <input type="date" id="dataFinal" value="">
                 </div>
+
                 <div id="buttons">
                     <button  class="selectButtoms" onclick="selecionarBotao(this), click_cdb()">CDB</button>
                     <button  class="selectButtoms" onclick="selecionarBotao(this), click_lca()">LCA/LCI</button>
                 </div>
+
+                <div id="nav_button">
+                    <button id="btn_calcular" onclick="calculoLucro()">Calcular</button>
+                </div>    
+
             </div>
 
+        </div>
+
+        <div class="nav_resultados">
             <div id="container_resultados">
+
                 <h1 style="color: black;">Resultados</h1>
-                <div>
-                    <p>Lucro Bruto</p>
-                    <div class="container-input">
-                        <div>R$</div>
+
+                <div id="container-output-investimento">
+                    <div class="container-output" >
+                        <p>Investimento</p>
+                        <!-- <div>R$</div> -->
+                        <output id="investimento_resultado"></output> 
+                    </div>
+                </div>
+
+                <div id="container-output-lucroBruto">
+                    <div class="container-output" >
+                        <p>Lucro Bruto</p>
+                        <!-- <div>R$</div> -->
                         <output id="lucroBruto"></output> 
                     </div>
                 </div>
-                <div>
-                    <p>% Imposto de Renda</p>
-                    <div class="container-input">
-                        <div>%</div>
+
+                <div id="container-output-percentualIr">                  
+                    <div class="container-output" >
+                        <p>% Imposto de Renda</p>
+                        <!-- <div>%</div> -->
                         <output type="text" id="percentualIr"></output> 
                     </div>
                 </div>
 
-                <div>
-                    <p>Imposto de Renda</p>
-                    <div class="container-input">
-                        <div>R$</div>
+                <div id="container-output-impostoRenda">                  
+                    <div class="container-output" >
+                        <p>Imposto de Renda</p>
+                        <!-- <div>R$</div> -->
                         <output type="text" id="impostoRenda"></output> 
                     </div>
                 </div>
-                <div>
-                    <p>Lucro Liquido</p>
-                    <div class="container-input">
-                        <div>R$</div>
+
+                <div id="container-output-lucroLiquido">                   
+                    <div class="container-output" >
+                        <p>Lucro Liquido</p>
+                        <!-- <div>R$</div> -->
                         <output type="text" id="lucroLiquido"></output> 
                     </div>
                 </div>
-                <div>
-                    <p>Valor Liquido</p>
-                    <div class="container-input">
-                        <div>R$</div>
+
+                <div id="container-output-valorLiquido">
+                    <div class="container-output" >
+                        <p>Valor Liquido</p>
+                        <!-- <div>R$</div> -->
                         <output type="text" id="valorLiquido"></output> 
                     </div>
                 </div>
+
             </div>
         </div>
 
-        <div id="nav_button">
-            <button id="btn_calcular" onclick="calculoLucro()">Calcular</button>
-        </div>    
+        
+
+        
+       <!-- <div id="container-examples">
+            <h1>Exemplos</h1>
+            <div class="container-exemples-img">
+                <img src="./img/cdb.jpg" alt="Exemplos CDB">
+            </div>
+
+            <h2>Dados</h2>
+            <div class="container-exemples-txt">
+                <p>Como exemplo vamos supor que vamos investir no CDB GMAC - OUT/2022, 
+                    sendo assim os dados necessários para a calculadora são: </p>
+                
+                <p>Da de Compra -> Data do dia em que foi realizado o investimento</p>
+                <p>Vencimento -> Data Final = 31/10/2022</p>
+                <p>Rentabilidade -> Taxa CDI = 103</p>
+                <p>Investimento -> O valor aplicado</p>
+            </div>
+       </div> -->
+
     </nav>
     
 </body>

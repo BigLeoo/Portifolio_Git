@@ -62,6 +62,35 @@ fetch(url)
 
     // }) 
 
+// ------------------------ Dias Uteis ------------------------------------
+
+async function dias_uteis(data_inicial, data_final){
+    const url = `https://calendarific.com/api/v2/holidays?api_key=428349b1535465365b8f45e73cc061ea9a65cd7e&country=br&year=2023`;
+
+    fetch(url)
+        .then(reponse => response.json())
+        .then(feriados => { 
+            const datasFeriados = feriados.response.feriados()
+        })
+
+    const datasFeriados = feriados.response.feriados.map(feriado => new Date(feriado.date.iso)); /* iso é a data */
+
+    data_inicial = new Date(data_inicial.getFullYear(), data_inicial.getMonth(), data_inicial.getDate());
+    data_final = new Date(data_final.getFullYear(), data_final.getMonth(), data_final.getDate());
+
+    let dias_util = 0;
+    let data_atual = data_inicial;
+
+   while(data_atual <= data_final) {
+    if(data_atual.getDay() !== 0 && data_atual.getDay() !== 6 && !datasFeriados.includes(data_atual)){
+        dias_util++; /* Se não for fim de semana ou feriado irá incrementar +1 ao dia útil */
+    }
+    data_atual.setDate(data_atual.getDate()+1);
+   }
+   return dias_util;
+}
+
+console.log(dias_uteis(new Date("2023-03-01"), new Date("2023-05-09")));
 //------------------------ Calculo do Resultado -----------------------------------------------
 
 function taxaEquivalente(){
@@ -146,10 +175,16 @@ function calculoLucro(){
             var valorLiquido = lucroLiquido + investimento;
         }
 
-        document.getElementById("lucroBruto").value = lucroBruto.toFixed(2);
-        document.getElementById("percentualIr").value = ir;
-        document.getElementById("impostoRenda").value = imposto.toFixed(2);
-        document.getElementById("lucroLiquido").value = lucroLiquido.toFixed(2);
-        document.getElementById("valorLiquido").value = valorLiquido.toFixed(2);
+        document.getElementById("investimento_resultado").innerHTML = `R$ ${investimento.toFixed(2)}`;
+        // document.getElementById("lucroBruto").value = lucroBruto.toFixed(2);
+        document.getElementById("lucroBruto").innerHTML = `R$ ${lucroBruto.toFixed(2)}`;
+        // document.getElementById("percentualIr").value = ir;
+        document.getElementById("percentualIr").innerHTML = `% ${ir}`;
+        // document.getElementById("impostoRenda").value = imposto.toFixed(2);
+        document.getElementById("impostoRenda").innerHTML = `R$ ${imposto.toFixed(2)}`;
+        // document.getElementById("lucroLiquido").value = lucroLiquido.toFixed(2);
+        document.getElementById("lucroLiquido").innerHTML = `R$ ${lucroLiquido.toFixed(2)}`;
+        // document.getElementById("valorLiquido").value = valorLiquido.toFixed(2);
+        document.getElementById("valorLiquido").innerHTML = `R$ ${valorLiquido.toFixed(2)}`;
     }
 }
